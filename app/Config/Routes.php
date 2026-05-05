@@ -46,10 +46,6 @@ $routes->post('/api/invoices', 'InvoiceController::save');
 $routes->post('/api/invoices/update/(:num)', 'InvoiceController::update/$1');
 $routes->delete('/api/invoices/(:num)', 'InvoiceController::delete/$1');
 
-// Other modules
-$routes->get('/customers', 'DashboardController::index');
-$routes->get('/settings', 'DashboardController::index');
-
 // customer routes
 $routes->get('/customers', 'CustomerController::index');
 $routes->get('/customers/getData', 'CustomerController::getData');
