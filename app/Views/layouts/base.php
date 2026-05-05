@@ -52,6 +52,7 @@
     </style>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="<?= base_url('js/components/pagination.js') ?>"></script>
 </head>
 <body>
     <div id="app">

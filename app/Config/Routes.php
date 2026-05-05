@@ -49,3 +49,16 @@ $routes->delete('/api/invoices/(:num)', 'InvoiceController::delete/$1');
 // Other modules
 $routes->get('/customers', 'DashboardController::index');
 $routes->get('/settings', 'DashboardController::index');
+
+// customer routes
+$routes->get('/customers', 'CustomerController::index');
+$routes->get('/customers/getData', 'CustomerController::getData');
+$routes->post('/customers/create', 'CustomerController::create');
+$routes->post('/customers/update/(:num)', 'CustomerController::update/$1');
+$routes->delete('/customers/delete/(:num)', 'CustomerController::delete/$1');
+
+// setting routes
+$routes->get('/settings', 'SettingsController::index');
+$routes->get('/settings/getData', 'SettingsController::getData');
+$routes->post('/settings/update-profile', 'SettingsController::updateProfile');
+$routes->post('/settings/update-password', 'SettingsController::updatePassword');

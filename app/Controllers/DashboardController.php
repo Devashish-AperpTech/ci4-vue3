@@ -11,6 +11,10 @@ class DashboardController extends BaseController
     
     public function index()
     {
+        if (!$this->userId) {
+            return redirect()->to('/login');
+        }
+
         $uri = service('uri');
         $page = $uri->getSegment(1) ?? 'dashboard';
         
