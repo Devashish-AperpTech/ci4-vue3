@@ -33,10 +33,19 @@ $routes->post('/forms/save', 'FormController::save');
 $routes->post('/forms/update/(:num)', 'FormController::update/$1');
 $routes->delete('/forms/delete/(:num)', 'FormController::delete/$1');
 
+// Invoice Routes
+$routes->get('/invoices', 'InvoiceController::index');
+$routes->get('/invoices/create', 'InvoiceController::create');
+$routes->get('/invoices/edit/(:num)', 'InvoiceController::edit/$1');
+
 // API Routes
 $routes->get('/api/dashboard-data', 'ApiController::dashboardData');
+$routes->get('/api/invoices', 'InvoiceController::getData');
+$routes->get('/api/invoices/(:num)', 'InvoiceController::getInvoice/$1');
+$routes->post('/api/invoices', 'InvoiceController::save');
+$routes->post('/api/invoices/update/(:num)', 'InvoiceController::update/$1');
+$routes->delete('/api/invoices/(:num)', 'InvoiceController::delete/$1');
 
 // Other modules
-$routes->get('/invoices', 'DashboardController::index');
 $routes->get('/customers', 'DashboardController::index');
 $routes->get('/settings', 'DashboardController::index');

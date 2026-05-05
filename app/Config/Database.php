@@ -8,11 +8,11 @@ class Database extends Config
 {
     public $defaultGroup = 'default';
     public $default = [
-        'DSN'      => 'pgsql:host=localhost;port=5432;dbname=digithera_local;user=postgres;password=postgres',
+        'DSN'      => 'pgsql:host=localhost;port=5432;dbname=digidata;user=postgres;password=postgres',
         'hostname' => 'localhost',
         'username' => 'postgres',
         'password' => 'postgres',
-        'database' => 'digithera_local',
+        'database' => 'digidata',
         'DBDriver' => 'Postgre',
         'DBPrefix' => '',
         'pConnect' => false,
